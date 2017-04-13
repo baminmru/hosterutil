@@ -1,7 +1,7 @@
 #!/bin/bash
 if  [ "$#" -lt 2 ]  
 then
-	echo 'Call this script with at least 3 parameters, for example:'
+	echo 'Call this script with at least 2 parameters, for example:'
 	echo '  unsecurefolders.sh <user> <domain> '
 	exit 1
 fi
