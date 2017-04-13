@@ -4,7 +4,7 @@
 
 if  [ "$#" -lt 3 ]  
 then
-	echo 'Call this script with at least 3 parameters, for example:'
+	echo 'Call this script with at least 4 parameters, for example:'
 	echo '  newuser.sh <user> <password> <domain> <ip> [default_email [template]]'
 	exit 1
 fi
