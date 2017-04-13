@@ -1,0 +1,8 @@
+<Files ~ ".*..*">
+    Order Allow,Deny
+    Deny from all
+</Files>
+<FilesMatch ".(jpg|jpeg|jpe|gif|png|tif|tiff|pdf|ico|doc|docx|xls)$">
+    Order Deny,Allow
+    Allow from all
+</FilesMatch>

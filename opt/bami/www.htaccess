@@ -1,0 +1,10 @@
+<Files wp-login.php>
+order deny,allow
+deny from all
+allow from 213.33.244.19
+</files>
+
+<Files xmlrpc.php>
+order deny,allow
+deny from all
+</Files>

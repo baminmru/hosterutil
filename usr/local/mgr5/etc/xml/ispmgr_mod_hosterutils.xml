@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mgrdata>
+      <handler name="hosterutils.php" type="cgi">
+       <func name="hosterutils"/>
+	   <func name="hosterutils.new"/>
+       <func name="hosterutils.lock"/>
+       <func name="hosterutils.unlock"/>
+    </handler>
+ 
+    <mainmenu level="30">
+      <node name="tool">
+        <node name="hosterutils"/>
+      </node>
+    </mainmenu>
+ 
+    <metadata name="hosterutils" type="list" key="name" level="admin+">
+      <toolbar>
+        <toolbtn func="hosterutils.new"     type="new"  img="t-new"  name="new"/>
+        <toolbtn func="hosterutils.lock"    type="edit" img="t-lock"  name="locker" />
+        <toolbtn func="hosterutils.unlock"  type="edit" img="t-unlock" name="unlocker"/>
+      </toolbar>
+      <coldata>
+		<col type="data" name="owner" sort="alpha" level="reseller+"/>     
+		<col type="data" name="name" sort="alpha" sorted="yes" convert="punycode"/>
+	  </coldata>
+    </metadata>
+ 
+    <metadata name="hosterutils.new" type="form" >
+      <form autocomplite="off" >
+        <field name="newowner" >
+          <input type="text" name="newowner" required="yes" />
+        </field>
+		<field name="passwd" >
+          <input type="password" checkpasswd="confirm" required="yes" name="passwd" />
+        </field>
+ 	    <field name="confirm">
+			<input type="password" notprop="yes" name="confirm"/>
+		</field>
+		<field name="newname">
+          <input type="text" name="newname" required="yes"/>
+        </field>
+		<field name="sendto">
+          <input type="text" name="sendto"/>
+        </field>
+
+		<field name="usertemplate">
+		    <select name="usertemplate"  />
+        </field>
+      </form>
+    </metadata>
+	
+	
+	<metadata name="hosterutils.lock" type="form">
+      <form>
+       <field name="owner">
+          <input type="text" name="owner" readonly="yes" />
+        </field>
+		<field name="name">
+          <input type="text" name="name" readonly="yes"/>
+        </field>
+      </form>
+    </metadata>
+	
+
+	<metadata name="hosterutils.unlock" type="form">
+      <form>
+        <field name="owner">
+          <input type="text" name="owner" readonly="yes" />
+        </field>
+		<field name="name">
+          <input type="text" name="name" readonly="yes"/>
+        </field>
+      </form>
+    </metadata>
+	
+    <lang name="en">
+      <messages name="desktop">
+        <msg name="menu_hosterutils">Hoster utils</msg>
+      </messages>
+      <messages name="hosterutils">
+        <msg name="title">Hoster utils</msg>
+		 <msg name="name">Domain</msg>
+        <msg name="owner">User</msg>
+		<msg name="short_new">New</msg>
+        <msg name="short_locker">Secure</msg>
+        <msg name="short_unlocker">Unsecure</msg>
+        <msg name="hint_new">New user</msg>
+        <msg name="hint_locker">Lock directory</msg>
+        <msg name="hint_unlocker">Unlock directory</msg>
+      </messages>
+	   <messages name="hosterutils.new">
+        <msg name="title">Create hosting user</msg>
+        <msg name="newowner">User name</msg>
+		<msg name="password">User password</msg>
+		<msg name="confirm">Confirm password</msg>
+		<msg name="newname">Domain</msg>
+		<msg name="sendto">default sendto email</msg>
+		<msg name="usertemplate">User  access template</msg>
+        <msg name="hint_item"></msg>
+      </messages>
+	  
+	  <messages name="hosterutils.lock">
+        <msg name="title">Lock user directory</msg>
+        <msg name="owner">User name</msg>
+		<msg name="name">Domain</msg>
+      </messages>
+	  
+      <messages name="hosterutils.unlock">
+		<msg name="title">Unlock user directory</msg>
+        <msg name="owner">User name</msg>
+		<msg name="name">Domain</msg>
+      </messages>
+    </lang>
+	
+	
+   <lang name="ru">
+      <messages name="desktop">
+        <msg name="menu_hosterutils">Утилиты хостера</msg>
+		
+      </messages>
+      <messages name="hosterutils">
+        <msg name="title">Утилиты хостера</msg>
+        <msg name="owner">Пользователь</msg>
+		<msg name="name">Домен</msg>
+		<msg name="short_new">Создать</msg>
+        <msg name="short_locker">Защитить</msg>
+        <msg name="short_unlocker">Открыть</msg>
+        <msg name="hint_new">Новый пользователь</msg>
+        <msg name="hint_locker">Устновить защиту директорий</msg>
+        <msg name="hint_unlocker">Снять защиту директорий</msg>
+      </messages>
+	   <messages name="hosterutils.new">
+        <msg name="title">Создать пользователя</msg>
+        <msg name="newowner">Имя</msg>
+		<msg name="password">Пароль</msg>
+		<msg name="confirm">Еще раз</msg>
+		<msg name="newname">Домен</msg>
+		<msg name="sendto">Адрес для пересылки</msg>
+		<msg name="usertemplate">Шаблон прав</msg>
+        <msg name="hint_item"></msg>
+      </messages>
+	  
+	  <messages name="hosterutils.lock">
+        <msg name="title">Устновить защиту директорий</msg>
+        <msg name="owner">Пользователь</msg>
+		<msg name="name">Домен</msg>
+      </messages>
+	  
+      <messages name="hosterutils.unlock">
+		<msg name="title">Снять защиту директорий</msg>
+        <msg name="owner">Пользователь</msg>
+		<msg name="name">Домен</msg>
+      </messages>
+    </lang>
+</mgrdata>
