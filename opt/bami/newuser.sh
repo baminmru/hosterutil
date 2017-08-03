@@ -82,7 +82,7 @@ cd www
 cd $3 
 cp /opt/bami/www.htaccess  .htaccess
 chmod 444 .htaccess
-rm -rf *.*
+; rm -rf *.*
 echo "; load wordpress" 
 wget -q https://ru.wordpress.org/latest-ru_RU.zip 
 
